@@ -1,0 +1,9 @@
+#container {
+    width: 960px;
+    height: 960px;
+    background-color: red;
+}
+
+.cell:hover {
+    background-color: black;
+}
