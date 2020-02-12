@@ -19,9 +19,15 @@ document.addEventListener('click',() => {
          divCell.style.height = '100%';
          divCell.style.width = dimension + 'px';
          divCell.style.float = 'left';
+         divCell.onmouseover = mouseHoverColorChange;
       } 
       
       container.appendChild(divRow);
    }
+
+   function mouseHoverColorChange(elementId) {
+      this.style.background = 'black';
+   }
+
    document.getElementsByClassName('row').height = dimension;
 })

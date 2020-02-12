@@ -1,9 +1,10 @@
 #container {
     width: 960px;
-    height: 960px;
-    background-color: red;
 }
-
-.cell:hover {
-    background-color: black;
+.cell {
+    background-color: red;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-collapse: collapse;
 }
