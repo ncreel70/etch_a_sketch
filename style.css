@@ -1,5 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+}
 #container {
     width: 960px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
 }
 .cell {
     background-color: red;
