@@ -1,6 +1,7 @@
 
-document.addEventListener('click',() => {
+document.getElementById('start').addEventListener('click',() => {
    
+   document.getElementById('container').innerHTML = '';
    let container = document.getElementById('container');
    let gridSize = document.getElementById('gridSize').value;
    let dimension = 960/gridSize;
@@ -27,7 +28,10 @@ document.addEventListener('click',() => {
    }
 
    function mouseHoverColorChange(elementId) {
-      this.style.background = 'black';
+      let r = Math.floor(Math.random() * 255);
+      let g = Math.floor(Math.random() * 255);
+      let b = Math.floor(Math.random() * 255);
+      this.style.background = 'rgb('+ r + ', ' + g + ', ' + b +')';
    }
 
    document.getElementsByClassName('row').height = dimension;
