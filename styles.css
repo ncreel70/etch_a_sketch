@@ -1,0 +1,27 @@
+body {
+  display: grid;
+  justify-items: center;
+  background-color: gray;
+}
+/* #userInput {
+    display: grid;
+    justify-self: center;
+} */
+
+#container {
+  width: 960px;
+  display: grid;
+  justify-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+.cell {
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-collapse: collapse;
+}
