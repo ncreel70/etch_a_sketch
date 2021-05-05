@@ -2,21 +2,27 @@ document.getElementById("start").addEventListener("click", () => {
   document.getElementById("container").innerHTML = "";
   let container = document.getElementById("container");
   let gridSize = document.getElementById("gridSize").value;
-  let dimension = 960 / gridSize;
+  let dimension = 1 / gridSize;
+  let phoneScreen = window.matchMedia("screen and (max-width: 600px)");
+  container.style.border = "1px solid black";
+  container.style.borderRadius = "50px";
 
   for (let i = 0; i < gridSize; i++) {
     let divRow = document.createElement("div");
     divRow.className = "row";
-    divRow.style.height = dimension + "px";
 
     for (let k = 0; k < gridSize; k++) {
       let divCell = document.createElement("div");
       divCell.className = "cell";
-      divCell.id = "cell" + k + i;
       divRow.appendChild(divCell);
-      divCell.style.height = "100%";
-      divCell.style.width = dimension + "px";
-      divCell.style.gridAutoColumns = "auto";
+      if (phoneScreen.matches) {
+        divCell.style.height = dimension * 70 + "vh";
+        divCell.style.width = dimension * 100 + "vw";
+      } else {
+        divCell.style.height = dimension * 100 + "vh";
+        divCell.style.width = dimension * 60 + "vw";
+      }
+
       divCell.onmouseover = mouseHoverColorChange;
     }
 
@@ -27,8 +33,6 @@ document.getElementById("start").addEventListener("click", () => {
     let r = Math.floor(Math.random() * 255);
     let g = Math.floor(Math.random() * 255);
     let b = Math.floor(Math.random() * 255);
-    this.style.background = "rgb(" + r + ", " + g + ", " + b + ")";
+    this.style.background = `rgb(${r},${g},${b})`;
   }
-
-  document.getElementsByClassName("row").height = dimension;
 });

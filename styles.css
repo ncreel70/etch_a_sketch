@@ -1,17 +1,17 @@
 body {
   display: grid;
+  margin: 0;
   justify-items: center;
-  background-color: gray;
+  background-color: #dc143c;
 }
-/* #userInput {
-    display: grid;
-    justify-self: center;
-} */
 
 #container {
-  width: 960px;
-  display: grid;
-  justify-items: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  overflow: hidden;
+  background-color: grey;
 }
 
 .row {
@@ -20,8 +20,7 @@ body {
 }
 .cell {
   background-color: white;
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
-  border-collapse: collapse;
+}
+
+@media screen and (max-width: 600px) {
 }
