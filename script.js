@@ -1,9 +1,13 @@
+let container = document.getElementById("container");
+let phoneScreen = window.matchMedia("screen and (max-width: 600px)");
+let colorToggle = document.getElementById("colorToggle");
+let colorToggleLabel = document.getElementById("slider-label");
+
 document.getElementById("start").addEventListener("click", () => {
-  document.getElementById("container").innerHTML = "";
-  let container = document.getElementById("container");
   let gridSize = document.getElementById("gridSize").value;
   let dimension = 1 / gridSize;
-  let phoneScreen = window.matchMedia("screen and (max-width: 600px)");
+  document.getElementById("container").innerHTML = "";
+
   container.style.border = "1px solid black";
   container.style.borderRadius = "50px";
 
@@ -28,11 +32,23 @@ document.getElementById("start").addEventListener("click", () => {
 
     container.appendChild(divRow);
   }
+});
 
-  function mouseHoverColorChange(elementId) {
+colorToggle.addEventListener("click", () => {
+  if (colorToggle.checked) {
+    colorToggleLabel.innerText = "RAINBOW";
+  } else {
+    colorToggleLabel.innerText = "BLACK";
+  }
+});
+
+function mouseHoverColorChange(elementId) {
+  if (colorToggle.checked) {
     let r = Math.floor(Math.random() * 255);
     let g = Math.floor(Math.random() * 255);
     let b = Math.floor(Math.random() * 255);
     this.style.background = `rgb(${r},${g},${b})`;
+  } else {
+    this.style.background = "black";
   }
-});
+}
