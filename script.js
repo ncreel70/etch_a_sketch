@@ -4,9 +4,9 @@ let colorToggle = document.getElementById("colorToggle");
 let colorToggleLabel = document.getElementById("slider-label");
 
 document.getElementById("start").addEventListener("click", () => {
+  container.innerHTML = "";
   let gridSize = document.getElementById("gridSize").value;
   let dimension = 1 / gridSize;
-  document.getElementById("container").innerHTML = "";
 
   container.style.border = "1px solid black";
   container.style.borderRadius = "50px";
@@ -37,7 +37,9 @@ document.getElementById("start").addEventListener("click", () => {
 colorToggle.addEventListener("click", () => {
   if (colorToggle.checked) {
     colorToggleLabel.innerText = "RAINBOW";
+    colorToggleLabel.classList.add("rainbow-text");
   } else {
+    colorToggleLabel.classList.remove("rainbow-text");
     colorToggleLabel.innerText = "BLACK";
   }
 });

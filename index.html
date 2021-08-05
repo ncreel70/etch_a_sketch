@@ -12,12 +12,14 @@
   </head>
   <body>
     <header>
-      <h1>MAGIC <span class="cursive">Etch-A-Sketch</span> SCREEN</h1>
+      <h1>MAGIC <span class="cursive">Etch A Sketch</span> SCREEN</h1>
     </header>
 
-    <div id="container"></div>
+    <div id="container" class="centerText">
+      Please choose a grid size to start your Etch-A-Sketch!
+    </div>
     <div class="knob" id="left-knob">
-      <div id="slider-label">BLACK</div>
+      <div id="slider-label" class="cursive">BLACK</div>
       <label class="switch">
         <input id="colorToggle" type="checkbox" />
         <span class="slider round"></span>
@@ -26,7 +28,9 @@
 
     <div class="knob" id="right-knob">
       <div id="userInput">
-        <label for="gridSize" id="gridSizeLabel">Grid Size: </label>
+        <label for="gridSize" id="gridSizeLabel" class="cursive"
+          >Grid Size
+        </label>
         <input type="number" id="gridSize" />
         <button id="start">Create Canvas</button>
       </div>

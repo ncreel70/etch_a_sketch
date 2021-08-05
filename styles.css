@@ -14,6 +14,8 @@ body {
   margin-top: 20px;
   overflow: hidden;
   background-color: lightgrey;
+  text-align: center;
+  font-size: 30px;
 }
 
 .row {
@@ -114,13 +116,38 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-#slider-label {
+#slider-label,
+#gridSizeLabel {
   font-weight: bold;
+  font-size: 30px;
 }
 
 .cursive {
   font-family: "Pacifico", cursive;
 }
 
+#gridSizeLabel,
+#gridSize {
+  display: block;
+}
+
+#gridSizeLabel {
+  padding-left: 20%;
+}
+
+.rainbow-text {
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
 @media screen and (max-width: 600px) {
 }
